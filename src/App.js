@@ -1,6 +1,13 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import SimpleEventerComponent from "./components/SimpleEventerComponent";
+import SimpleListenerComponent from "./components/SimpleListenerComponent";
+import MockApiComponent from './components/MockApiComponent';
+import CombineEvents from './events/CombineEvents';
+
+// We will be looking into providing some functionality for you to add events at scale to reduce boilerplating.
+CombineEvents();
 
 class App extends Component {
   render() {
@@ -8,11 +15,16 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Welcome to Stateless with React</h1>
+          <code>We know it isn't pretty.</code>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className="App-intro">
+          <h2>Sample communication between components</h2>
+          <SimpleEventerComponent />
+          <SimpleListenerComponent />
+        </div>
+        <h2>Mock Api Example</h2>
+        <MockApiComponent/>
       </div>
     );
   }
