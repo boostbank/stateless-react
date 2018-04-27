@@ -3,6 +3,7 @@
 ## Installation
 
 > Clone the repo
+
 > Install the dependencies
 ```sh
 npm install
