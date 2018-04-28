@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import MockApi from "./MockApi";
 import MockApiEvent from "./../events/MockApiEvent";
-import { listen, ignore } from "@boostbank/stateless/lib/stateless";
+import { listen, ignore } from "@boostbank/stateless";
 import uuid from "uuid/v1";
 
 class MockApiComponent extends Component {

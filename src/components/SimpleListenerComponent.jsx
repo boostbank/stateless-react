@@ -1,6 +1,6 @@
 import React from "react";
 import uuid from "uuid/v1";
-import { listen, ignore } from "@boostbank/stateless/lib/stateless";
+import { listen, ignore } from "@boostbank/stateless";
 import AddNameEvent from "./../events/AddNameEvent";
 import AddNameErrorEvent from "./../events/AddNameErrorEvent";
 

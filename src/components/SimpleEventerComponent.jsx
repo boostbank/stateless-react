@@ -1,5 +1,5 @@
 import React from "react";
-import { dispatch } from "@boostbank/stateless/lib/stateless";
+import { dispatch } from "@boostbank/stateless";
 import AddNameEvent from "./../events/AddNameEvent";
 import AddNameErrorEvent from "./../events/AddNameErrorEvent";
 
