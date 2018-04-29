@@ -43,7 +43,7 @@ class MockApiComponent extends Component {
       content = (
         <ul>
           {this.state.names.map(name => {
-            return <li>{name}</li>;
+            return <li key={uuid()}>{name}</li>;
           })}
         </ul>
       );
