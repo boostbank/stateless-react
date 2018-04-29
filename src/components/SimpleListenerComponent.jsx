@@ -8,7 +8,6 @@ export default class SimpleListenerComponent extends React.Component {
   constructor() {
     super();
     this.state = {
-      uid: uuid(),
       names: []
     };
     this.onNameAdd = this.onNameAdd.bind(this);
@@ -23,15 +22,15 @@ export default class SimpleListenerComponent extends React.Component {
   }
 
   componentDidMount() {
-    listen(AddNameEvent().id, this.state.uid, this.onNameAdd);
-    listen(AddNameErrorEvent().id, this.state.uid, event=>{
-        alert(event.payload.error);
+    listen(AddNameEvent().id, this, this.onNameAdd);
+    listen(AddNameErrorEvent().id, this, event => {
+      alert(event.payload.error);
     });
   }
 
   componentWillUnmount() {
-    ignore(AddNameEvent().id, this.state.uid);
-    ignore(AddNameErrorEvent().id, this.state.uid);
+    ignore(AddNameEvent().id, this);
+    ignore(AddNameErrorEvent().id, this);
   }
 
   render() {
