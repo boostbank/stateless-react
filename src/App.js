@@ -4,10 +4,6 @@ import "./App.css";
 import SimpleEventerComponent from "./components/SimpleEventerComponent";
 import SimpleListenerComponent from "./components/SimpleListenerComponent";
 import MockApiComponent from './components/MockApiComponent';
-import CombineEvents from './events/CombineEvents';
-
-// We will be looking into providing some functionality for you to add events at scale to reduce boilerplating.
-CombineEvents();
 
 class App extends Component {
   render() {
